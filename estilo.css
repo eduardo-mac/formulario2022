@@ -1,0 +1,13 @@
+body,html{
+    height:100%;
+    margin: 0;
+}
+.fundo{
+    background-image: url("studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-for-product.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.pj{
+    display: block;
+}
