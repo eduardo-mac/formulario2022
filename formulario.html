@@ -69,6 +69,20 @@
         <button data-bs-toggle="collapse" data-bs-target="#pj" class="btn btn-white  btn-outline-info rounded-pill btn-block"  >Sou Pessoa Jurídica</button><br><br>
         </center>   
        <div class="row" id="soletra">
+        <div class="row ; collapse" id="pj" >    
+            <div class="col-sm ">
+                <label> Razão Social:</label><br>
+                <input class="fortela" class="quebra espaco" type="text" name="f_nome" size="25" ><br>
+            </div>
+            <div class="col-sm ">
+                <label> Nome Fantasia:</label><br>
+                <input class="fortela" class="quebra espaco" type="text" name="f_nome" size="25" ><br>    
+            </div>
+            <div class="col-sm ">
+                <label> CNPJ:</label>
+                <input name="cnpj" id="cnpj" onkeydown="mascara_cnpj()" onload="ee()" maxlength="18" size="25" size="25"size="25"class="fortela" class="quebra espaco" type="text" ><br>    
+            </div>
+        </div>
             <div class="col-sm">
                 <label > Nome:</label><br>
                 <input   class="fortela"  class="quebra espaco" type="text" name="f_nome" size="25" required> <br>
@@ -77,33 +91,16 @@
                 <label> Sobrenome:</label><br>
                 <input   class="fortela" id="l" class="quebra espaco" type="text" name="f_nome" size="25" required><br>
             </div>
+            <div class="col-sm ">
+                <label> Data de Nascimento:</label>
+                <input class="fortela" class="quebra espaco" type="date" nome="f_date" min="1900-01-01" max="2022-08-01" required><br>    
+            </div>
         </div>
         <div class="row">
             <div class="col-sm ">    
                 <label> CPF:</label>
                 <input name="cpf" id="cpf" class="fortela" class="quebra espaco" type="text" maxlength="14" size="25" required><br>
             </div>    
-        </div>
-       
-        <div class="row ; collapse" id="pj" >    
-                    <div class="col-sm ">
-                        <label> Razão Social:</label><br>
-                        <input class="fortela" class="quebra espaco" type="text" name="f_nome" size="25" ><br>
-                    </div>
-                    <div class="col-sm ">
-                        <label> Nome Fantasia:</label><br>
-                        <input class="fortela" class="quebra espaco" type="text" name="f_nome" size="25" ><br>    
-                    </div>
-                    <div class="col-sm ">
-                        <label> CNPJ:</label>
-                        <input name="cnpj" id="cnpj" onkeydown="mascara_cnpj()" onload="ee()" maxlength="18" size="25" size="25"size="25"class="fortela" class="quebra espaco" type="text" ><br>    
-               </div>
-        </div>
-        <div class="row">
-            <div class="col-sm ">
-                <label> Data de Nascimento:</label>
-                <input class="fortela" class="quebra espaco" type="date" nome="f_date" min="1900-01-01" max="2022-08-01" required><br>    
-            </div>
             <div class="col-sm ">
                 <label>Sexo:</label>
                 <select class="fortela" class="quebra espaco" name="f_sexo" required>
@@ -117,12 +114,11 @@
                 <input name="email" id="email" class="fortela" class="quebra espaco" type="email" nome="f_email" size="25" required><br>
             </div>
         </div>    
+        <div class="row">
             <div class="col-sm ">
                 <label> Telefone:</label>
                 <input id="tel" id="num" class="fortela" maxlength="14" class="quebra espaco" type="text" size="20" placeholder="(xx)9xxxx-xxxx" required><br>
             </div>
-          
-        <div class="row">
             <div class="col-sm">
                 <label> Cep:</label>
                 <input id="cep" class="fortela" class="quebra espaco" type="text" size="20"  required><br>
@@ -131,12 +127,12 @@
                 <label> Endereço:</label>
                 <input class="fortela" class="quebra espaco" type="text" size="25" required><br>
             </div>    
+        </div>    
+        <div class="row">
             <div class="col-sm ">
                 <label> Cidade:</label>
                 <input class="fortela" class="quebra espaco" type="text"  size="25" required><br>
             </div>
-        </div>    
-        <div class="row">
             <div class="col-sm ">
                 <label> Número:</label>
                 <input id="num" oninput="ee()" class="fortela" class="quebra espaco" type="number" size="25" required><br>
