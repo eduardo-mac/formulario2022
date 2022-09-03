@@ -24,6 +24,24 @@ $(document).ready(function () {
     $seuCampocep.mask('00000-000', {reverse: true});
 });
 
+var inputNome = document.querySelector("#soletra");
+soletra.addEventListener("keypress", function(e) {
+    var keyCode = (e.keyCode ? e.keyCode : e.which);
+  
+  if (keyCode > 47 && keyCode < 58) {
+    e.preventDefault();
+  }
+});
+var letra = document.querySelector("#soletra02");
+soletra02.addEventListener("keypress", function(e) {
+    var keyCode = (e.keyCode ? e.keyCode : e.which);
+  
+  if (keyCode > 47 && keyCode < 58) {
+    e.preventDefault();
+  }
+});
+
+
 // JS-RADIO-PJ
 // var selecionar_pfpj= document.getElementById("selec_pj");
 

@@ -60,7 +60,7 @@
 <body class="fundo" onloada="o_number()">
     <div class="container ">
         <center >
-        <img class="imag" src="imaform.webp" >
+        <img class="imag" src="imaform.webp" ><br><br>
         <div class="tcentral">
              <h1 class="letra">Formulário de Cadastro</h1>
         </div>
@@ -68,18 +68,20 @@
         <form  id="formulario" class="letra">
         <button data-bs-toggle="collapse" data-bs-target="#pj" class="btn btn-white  btn-outline-info rounded-pill btn-block"  >Sou Pessoa Jurídica</button><br><br>
         </center>   
-       <div class="row">
+       <div class="row" id="soletra">
             <div class="col-sm">
                 <label > Nome:</label><br>
-                <input   class="fortela" id="fundi" pattern="[a-zA-Z\s]+$" class="quebra espaco" type="text" name="f_nome" size="25" required> <br>
+                <input   class="fortela"  class="quebra espaco" type="text" name="f_nome" size="25" required> <br>
             </div>
             <div class="col-sm" >
-                <label > Sobrenome:</label><br>
-                <input   class="fortela" class="quebra espaco" type="text" name="f_nome" size="25" required><br>
+                <label> Sobrenome:</label><br>
+                <input   class="fortela" id="l" class="quebra espaco" type="text" name="f_nome" size="25" required><br>
             </div>
+        </div>
+        <div class="row">
             <div class="col-sm ">    
                 <label> CPF:</label>
-                <input name="cpf" id="cpf" class="fortela" class="quebra espaco" type="text" maxlength="14" size="25" size="25"size="25"size="25"required><br>
+                <input name="cpf" id="cpf" class="fortela" class="quebra espaco" type="text" maxlength="14" size="25" required><br>
             </div>    
         </div>
        
@@ -142,7 +144,9 @@
             <div class="col-sm ">
                 <label> Bairro:</label>
                 <input class="fortela" class="quebra espaco" type="text" size="25"  required> <br>
-            </div>    
+            </div> 
+        </div>
+        <div class="row" id="soletra02">      
             <div class="col-sm ">
                 <label> Estado:</label>
                 <input class="fortela" class="quebra espaco" type="text" size="25"  required><br>
