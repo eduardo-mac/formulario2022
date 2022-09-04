@@ -40,6 +40,14 @@ soletra02.addEventListener("keypress", function(e) {
     e.preventDefault();
   }
 });
+var letrasomente = document.querySelector("#soletra01");
+soletra01.addEventListener("keypress", function(e) {
+    var keyCode = (e.keyCode ? e.keyCode : e.which);
+  
+  if (keyCode > 47 && keyCode < 58) {
+    e.preventDefault();
+  }
+});
 
 
 // JS-RADIO-PJ
