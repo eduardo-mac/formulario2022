@@ -50,23 +50,6 @@ soletra01.addEventListener("keypress", function(e) {
 });
 
 
-// JS-RADIO-PJ
-// var selecionar_pfpj= document.getElementById("selec_pj");
-
-// selecionar_pfpj.addEventListener("click", function(){
-//     let pj = document.querySelector("#pj");
-    
-//     if(pj.style.display === "none"){
-//         pj.style.display = "block"
-//     }else {
-//         pj.style.display = "none";
-//     }
-// })
-
-
-
-
-
 
 
 
