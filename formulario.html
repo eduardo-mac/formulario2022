@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Formulario UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <style>
+        
+        .informa{
+            border: 1px solid;
+            border-radius: 5pv;
+            background-color: #eee;
+        }
+        .informa{
+            position: absolute;
+            background-color: #0f0;
+            left: 500px;
+            top: 20%;
+            border-radius: 50px;
+        }
+            em{color:#f00}
+
+            .fortela{
+                border-radius: 80px;
+                background-color: rgb(232, 224, 224);
+                display: block;
+                font-size: larger;
+            }    
+            form{
+                padding: 50px;
+                font-size: larger;
+            }
+            
+            .quebra{display: block;}
+            .espaco_t{margin-top:15px;}
+            .espaco{margin-bottom: 15px;}
+
+            .tcentral{
+                width: 400px;
+                margin: auto;
+                font-family: 'DynaPuff', cursive;
+            }
+            .imag{
+                width: 400px;
+                margin: auto;
+            }
+            .letra{color: #eee;}
+            
+           
+            
+    </style>
+    <link type="text/css" rel="stylesheet" href="estilo.css" >
+
+</head>
+<body class="fundo" onloada="o_number()">
+    <div class="container ">
+        <center >
+        <img class="imag" src="imaform.webp" ><br><br>
+        <div class="tcentral">
+             <h1 class="letra">Formulário de Cadastro</h1>
+        </div>
+        </center>   
+        <form  id="formulario" class="letra">
+        <button data-bs-toggle="collapse" data-bs-target="#pj" class="btn btn-white  btn-outline-info rounded-pill btn-block"  >Sou Pessoa Jurídica</button><br><br>
+        </center>   
+       <div class="row" >
+        <div class="row ; collapse" id="pj" >    
+            <div class="col-sm " id="soletra">
+                <label class="form-label"> Razão Social:</label><br>
+                <input class="fortela" class="quebra espaco" type="text" name="f_nome" size="25" ><br>
+            </div>
+            <div class="col-sm " id="soletra01">
+                <label class="form-label"> Nome Fantasia:</label><br>
+                <input class="fortela" class="quebra espaco" type="text" name="f_nome" size="25" ><br>    
+            </div>
+            <div class="col-sm ">
+                <label class="form-label"> CNPJ:</label>
+                <input name="cnpj" id="cnpj" onkeydown="mascara_cnpj()" onload="ee()" maxlength="18" size="25" size="25"size="25"class="fortela" class="quebra espaco" type="text" ><br>    
+            </div>
+        </div>
+            <div class="col-sm mt-5">
+                <label class="form-label"> Nome:</label><br>
+                <input   class="fortela"  class="quebra espaco" type="text" name="f_nome" size="25" required> <br>
+            </div>
+            <div class="col-sm mt-5" >
+                <label class="form-label"> Sobrenome:</label><br>
+                <input   class="fortela" id="l" class="quebra espaco" type="text" name="f_nome" size="25" required><br>
+            </div>
+            <div class="col-sm mt-5">
+                <label class="form-label"> Data de Nascimento:</label>
+                <input class="fortela" class="quebra espaco" type="date" nome="f_date" min="1900-01-01" max="2022-08-01" required><br>    
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm mt-5">    
+                <label class="form-label"> CPF:</label>
+                <input name="cpf" id="cpf" class="fortela" class="quebra espaco" type="text" maxlength="14" size="25" required><br>
+            </div>    
+            <div class="col-sm mt-5">
+                <label class="form-label">Sexo:</label>
+                <select class="fortela" class="quebra espaco" name="f_sexo" required>
+                    <option> Masculino</option>
+                    <option> Feminino</option>
+                    <option> Nada a declarar</option>
+                </select><br>
+            </div>
+            <div class="col-sm mt-5">   
+                <label class="form-label"> Digite seu Email</label>
+                <input name="email" id="email" class="fortela" class="quebra espaco" type="email" nome="f_email" size="25" required><br>
+            </div>
+        </div>    
+        <div class="row">
+            <div class="col-sm mt-5">
+                <label class="form-label"> Telefone:</label>
+                <input id="tel" id="num" class="fortela" maxlength="14" class="quebra espaco" type="text" size="20" placeholder="(xx)9xxxx-xxxx" required><br>
+            </div>
+            <div class="col-sm mt-5">
+                <label class="form-label"> Cep:</label>
+                <input id="cep" class="fortela" class="quebra espaco" type="text" size="20"  required><br>
+            </div>
+            <div class="col-sm mt-5">
+                <label class="form-label"> Endereço:</label>
+                <input class="fortela" class="quebra espaco" type="text" size="25" required><br>
+            </div>    
+        </div>    
+        <div class="row">
+            <div class="col-sm mt-5">
+                <label class="form-label"> Cidade:</label>
+                <input class="fortela" class="quebra espaco" type="text"  size="25" required><br>
+            </div>
+            <div class="col-sm mt-5">
+                <label class="form-label"> Número:</label>
+                <input id="num" oninput="ee()" class="fortela" class="quebra espaco" type="number" size="25" required><br>
+            </div>
+            <div class="col-sm mt-5">
+                <label class="form-label"> Bairro:</label>
+                <input class="fortela" class="quebra espaco" type="text" size="25"  required> <br>
+            </div> 
+        </div>
+        <div class="row" id="soletra02">      
+            <div class="col-sm mt-5">
+                <label class="form-label"> Estado:</label>
+                <input class="fortela" class="quebra espaco" type="text" size="25"  required><br>
+            </div>
+        </div>
+              
+            <div class="col-sm mt-5">
+                <label class="form-label">Senha:</label>
+                <input class="fortela" class="quebra espaco" id="senha" type="password" name="f_senha" size="20" maxlength="10" required><br> 
+                <input type="checkbox" onclick="mostrarOcultarSenha()">Mostrar Senha <br><br>
+            </div>
+            <div class="col-sm mt-5">
+                <label class= "quebra espaco" class="quebra"> Opiniões:</label>
+                <textarea class="quebra espaco" name="f_comantário" cols="50" rows="10"required></textarea><br>    
+            </div>
+           
+            <label> Aceitar termos e condições:</label> 
+            <input type="radio" name="termo" checked required> sim
+            <input type="radio" name="termo"> não<br>
+            <input class=" btn btn-primary" type="submit" name="bto_enviar" value="Enviar" >
+            <input type="reset" name="bto_limpar" class="btn btn-secondary" value="Limpar"> 
+    </div> 
+       
+</form>
+    <script type="text/javascript" src="js/jquery.3.3.1min.js"></script>
+    <script type="text/javascript" src="js/scritps.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
