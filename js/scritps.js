@@ -18,6 +18,7 @@ $(document).ready(function () {
   $seuCampocep.mask('00000-000', {
     reverse: true
   });
+});
 
   var inputNome = document.querySelector("#soletra");
   soletra.addEventListener("keypress", function (e) {
@@ -27,22 +28,32 @@ $(document).ready(function () {
       e.preventDefault();
     }
   });
-  var letra = document.querySelector("#soletra02");
-  soletra02.addEventListener("keypress", function (e) {
+  var inputNome = document.querySelector("#sol01");
+  sol01.addEventListener("keypress", function (e) {
     var keyCode = (e.keyCode ? e.keyCode : e.which);
 
     if (keyCode > 47 && keyCode < 58) {
       e.preventDefault();
     }
   });
-  var letrasomente = document.querySelector("#soletra01");
-  soletra01.addEventListener("keypress", function (e) {
+  var inputNome = document.querySelector("#sol02");
+  sol02.addEventListener("keypress", function (e) {
     var keyCode = (e.keyCode ? e.keyCode : e.which);
 
     if (keyCode > 47 && keyCode < 58) {
       e.preventDefault();
     }
   });
+  var inputNome = document.querySelector("#sol03");
+  sol03.addEventListener("keypress", function (e) {
+    var keyCode = (e.keyCode ? e.keyCode : e.which);
+
+    if (keyCode > 47 && keyCode < 58) {
+      e.preventDefault();
+    }
+  });
+
+
 
 
 // JS-RADIO-PJ
