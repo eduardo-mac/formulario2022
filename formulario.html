@@ -60,46 +60,46 @@
 <body class="fundo" onloada="o_number()">
     <div class="container ">
         <center >
-        <img class="imag" src="imaform.webp" ><br><br>
+        <img class="imag" src="imaform.webp" >
         <div class="tcentral">
              <h1 class="letra">Formulário de Cadastro</h1>
         </div>
         </center>   
 <form  id="fo" class="letra">
-        <button data-bs-toggle="collapse" data-bs-target="#pj" class="btn btn-white  btn-outline-info rounded-pill btn-block"  >Sou Pessoa Jurídica</button><br><br>
+        <button data-bs-toggle="collapse" data-bs-target="#pj" class="btn btn-white  btn-outline-info rounded-pill btn-block"  >Sou Pessoa Jurídica</button>
         </center>   
        <div class="row" >
-        <div class="row ; collapse" id="pj" >    
+        <div class="row mt-3 ; collapse" id="pj" >    
             <div class="col-sm " id="soletra">
-                <label class="form-label"> Razão Social:</label><br>
-                <input class="fortela" class="quebra espaco" type="text" name="f_nome" size="25" ><br>
+                <label class="form-label"> Razão Social:</label>
+                <input class="fortela" class="quebra espaco" type="text" name="f_nome" size="25" >
             </div>
             <div class="col-sm " id="sol01">
-                <label class="form-label"> Nome Fantasia:</label><br>
-                <input class="fortela" class="quebra espaco" type="text" name="f_nome" size="25" ><br>    
+                <label class="form-label"> Nome Fantasia:</label>
+                <input class="fortela" class="quebra espaco" type="text" name="f_nome" size="25" >
             </div>
             <div class="col-sm ">
                 <label class="form-label"> CNPJ:</label>
-                <input name="cnpj" id="cnpj" onkeydown="mascara_cnpj()" onload="ee()" maxlength="18" size="25" size="25"size="25"class="fortela" class="quebra espaco" type="text" ><br>    
+                <input name="cnpj" id="cnpj" size="25" class="fortela" class="quebra espaco" type="text" >    
             </div>
         </div>
             <div id="sol02" class="col-sm mt-5">
-                <label class="form-label"> Nome:</label><br>
-                <input   class="fortela"  class="quebra espaco" type="text" size="25" required> <br>
+                <label class="form-label"> Nome:</label>
+                <input   class="fortela"  class="quebra espaco" type="text" size="25" required> 
             </div>
             <div class="col-sm mt-5" id="sol03">
-                <label class="form-label"> Sobrenome:</label><br>
-                <input   class="fortela" id="l" class="quebra espaco" type="text" name="f_nome" size="25" required><br>
+                <label class="form-label"> Sobrenome:</label>
+                <input   class="fortela" id="l" class="quebra espaco" type="text" name="f_nome" size="25" required>
             </div>
             <div class="col-sm mt-5">
                 <label class="form-label"> Data de Nascimento:</label>
-                <input class="fortela" class="quebra espaco" type="date" nome="f_date" min="1900-01-01" max="2022-08-01" required><br>    
+                <input class="fortela" class="quebra espaco" type="date" nome="f_date" min="1900-01-01" max="2022-08-01" required>  
             </div>
         </div>
         <div class="row">
             <div class="col-sm mt-5">    
                 <label class="form-label"> CPF:</label>
-                <input name="cpf" id="cpf" class="fortela" class="quebra espaco" type="text" maxlength="14" size="25" required><br>
+                <input name="cpf" id="cpf" class="fortela" class="quebra espaco" type="text" maxlength="14" size="25" required>
             </div>    
             <div class="col-sm mt-5">
                 <label class="form-label">Sexo:</label>
@@ -107,66 +107,72 @@
                     <option> Masculino</option>
                     <option> Feminino</option>
                     <option> Nada a declarar</option>
-                </select><br>
+                </select>
             </div>
             <div class="col-sm mt-5">   
                 <label class="form-label"> Digite seu Email</label>
-                <input name="email" id="email" class="fortela" class="quebra espaco" type="email" no0me="f_email" size="25" required><br>
+                <input name="email" id="email" class="fortela" class="quebra espaco" type="email" no0me="f_email" size="25" required>
             </div>
         </div>    
         <div class="row">
             <div class="col-sm mt-5">
                 <label class="form-label"> Telefone:</label>
-                <input id="tel" class="fortela" class="quebra espaco" type="text" size="20" placeholder="(xx)9xxxx-xxxx" required><br>
+                <input id="tel" class="fortela" class="quebra espaco" type="text" size="20" placeholder="(xx)9xxxx-xxxx" required>
             </div>
             <div class="col-sm mt-5">
                 <label class="form-label"> Cep:</label>
-                <input id="cep" class="fortela" class="quebra espaco" type="text" size="20"  required><br>
+                <input id="cep" class="fortela" class="quebra espaco" type="text" size="20"  required>
             </div>
             <div class="col-sm mt-5">
                 <label class="form-label"> Endereço:</label>
-                <input class="fortela" class="quebra espaco" type="text" size="25" required><br>
+                <input class="fortela" class="quebra espaco" type="text" size="25" required>
             </div>    
         </div>    
         <div class="row">
             <div class="col-sm mt-5">
                 <label class="form-label"> Cidade:</label>
-                <input class="fortela" class="quebra espaco" type="text"  size="25" required><br>
+                <input class="fortela" class="quebra espaco" type="text"  size="25" required>
             </div>
             <div class="col-sm mt-5">
                 <label class="form-label"> Número:</label>
-                <input id="num" oninput="ee()" class="fortela" class="quebra espaco" type="number" size="25" required><br>
+                <input id="num" class="fortela" class="quebra espaco" maxlength="8" type="number" size="25" required>
             </div>
             <div class="col-sm mt-5">
                 <label class="form-label"> Bairro:</label>
-                <input class="fortela" class="quebra espaco" type="text" size="25"  required> <br>
+                <input class="fortela" class="quebra espaco" type="text" size="25"  required>
             </div> 
         </div>
         <div class="row" id="soletra02">      
             <div class="col-sm mt-5">
                 <label class="form-label"> Estado:</label>
-                <input class="fortela" class="quebra espaco" type="text" size="25"  required><br>
+                <input class="fortela" class="quebra espaco" type="text" size="25"  required>
             </div>
         </div>
               
             <div class="col-sm mt-5">
                 <label class="form-label">Senha:</label>
-                <input class="fortela" class="quebra espaco" id="senha" type="password" name="f_senha" size="20" maxlength="10" required><br> 
-                <input type="checkbox" onclick="mostrarOcultarSenha()">Mostrar Senha <br><br>
+                <input class="fortela" class="quebra espaco" id="senha" type="password" name="f_senha" size="20" maxlength="10" required>
+                <input class="mt-3" type="checkbox" onclick="mostrarOcultarSenha()">Mostrar Senha 
             </div>
             <div class="col-sm mt-5">
                 <label class= "quebra espaco" class="quebra"> Opiniões:</label>
-                <textarea class="quebra espaco" name="f_comantário" cols="50" rows="10"required></textarea><br>    
+                <textarea class="quebra espaco" name="f_comantário" cols="50" rows="10"required></textarea>   
             </div>
            
             <label> Aceitar termos e condições:</label> 
             <input type="radio" name="termo" checked required> sim
-            <input type="radio" name="termo"> não<br>
-            <input class=" btn btn-primary" type="submit" name="bto_enviar" value="Enviar" >
-            <input type="reset" name="bto_limpar" class="btn btn-secondary" value="Limpar"> 
+            <input type="radio" name="termo"> não
+            <div class="mt-3">
+                <input class=" btn btn-primary" type="submit" name="bto_enviar" value="Enviar" >
+                <input type="reset" name="bto_limpar" class="btn btn-secondary" value="Limpar"> 
+            </div>
+            
     </div> 
+
        
 </form>
+
+</script>
     <script type="text/javascript" src="js/jquery.3.3.1min.js"></script>
     <script type="text/javascript" src="js/scritps.js"></script>
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>

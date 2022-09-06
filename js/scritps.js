@@ -5,7 +5,7 @@ $(document).ready(function () {
   });
 
   var $seuCampocnpj = $("#cnpj");
-  $seuCampocnpj.mask('02.000.000/0000-00', {
+  $seuCampocnpj.mask('00.000.000/0000-00', {
     reverse: true
   });
 
@@ -52,6 +52,14 @@ $(document).ready(function () {
       e.preventDefault();
     }
   });
+  function mostrarOcultarSenha(){
+    let senha=document.getElementById("senha");
+    if(senha.type=="password"){
+        senha.type="text";
+    }else{
+        senha.type="password"
+    }
+}
 
 
 
