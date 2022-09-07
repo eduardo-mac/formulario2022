@@ -61,6 +61,22 @@ $(document).ready(function () {
     }
 }
 
+$("#ocult").click(
+  function(){
+    $(".ocult").toggle()
+    if($(".ocult").is(':visible')){
+      $("#ocult").text('Não Sou Pessoa Jurídica')
+    }else{
+      $("#ocult").text('Sou Pessoa Jurídica')
+
+    }
+  }
+); 
+
+
+
+
+
 
 
 

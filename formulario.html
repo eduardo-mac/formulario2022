@@ -57,7 +57,7 @@
     <link type="text/css" rel="stylesheet" href="estilo.css" >
 
 </head>
-<body class="fundo" onloada="o_number()">
+<body class="fundo"  onloada="o_number()">
     <div class="container ">
         <center >
         <img class="imag" src="imaform.webp" >
@@ -66,24 +66,24 @@
         </div>
         </center>   
 <form  id="fo" class="letra">
-        <button data-bs-toggle="collapse" data-bs-target="#pj" class="btn btn-white  btn-outline-info rounded-pill btn-block"  >Sou Pessoa Jurídica</button>
-        </center>   
+        <button id="ocult"  class="btn btn-white  btn-outline-info rounded-pill btn-block mb-3">Não Sou Pessoa Jurídica</button>
+        </center> 
        <div class="row" >
-        <div class="row mt-3 ; collapse" id="pj" >    
-            <div class="col-sm " id="soletra">
+        <div class="row mt- ; ocult">    
+            <div class="col-sm "  id="soletra">
                 <label class="form-label"> Razão Social:</label>
                 <input class="fortela" class="quebra espaco" type="text" name="f_nome" size="25" >
             </div>
-            <div class="col-sm " id="sol01">
+            <div class="col-sm" id="sol01">
                 <label class="form-label"> Nome Fantasia:</label>
                 <input class="fortela" class="quebra espaco" type="text" name="f_nome" size="25" >
             </div>
-            <div class="col-sm ">
+            <div class="col-sm">
                 <label class="form-label"> CNPJ:</label>
                 <input name="cnpj" id="cnpj" size="25" class="fortela" class="quebra espaco" type="text" >    
             </div>
         </div>
-            <div id="sol02" class="col-sm mt-5">
+            <div  id="sol02" class="col-sm mt-5">
                 <label class="form-label"> Nome:</label>
                 <input   class="fortela"  class="quebra espaco" type="text" size="25" required> 
             </div>
