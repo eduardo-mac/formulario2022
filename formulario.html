@@ -66,7 +66,7 @@
         </div>
         </center>   
 <form  id="fo" class="letra">
-        <button id="ocult"  class="btn btn-white  btn-outline-info rounded-pill btn-block mb-3">Não Sou Pessoa Jurídica</button>
+        <button id="ocult"  class="btn btn-white  btn-outline-info rounded-pill btn-block mb-3 ; anim">Não Sou Pessoa Jurídica</button>
         </center> 
        <div class="row" >
         <div class="row mt- ; ocult">    
@@ -125,27 +125,28 @@
             </div>
             <div class="col-sm mt-5">
                 <label class="form-label"> Endereço:</label>
-                <input class="fortela" class="quebra espaco" type="text" size="25" required>
+                <input id="rua" class="fortela" class="quebra espaco" type="text" size="25" required>
             </div>    
         </div>    
         <div class="row">
             <div class="col-sm mt-5">
-                <label class="form-label"> Cidade:</label>
-                <input class="fortela" class="quebra espaco" type="text"  size="25" required>
+                <label class="form-label"> Número:</label>
+                <input id="num" class="fortela" class="quebra espaco" maxlength="8" type="text" size="25" required>
+                
             </div>
             <div class="col-sm mt-5">
-                <label class="form-label"> Número:</label>
-                <input id="num" class="fortela" class="quebra espaco" maxlength="8" type="number" size="25" required>
+                <label class="form-label"> Cidade:</label>
+                <input id="cidade" class="fortela" class="quebra espaco" type="text"  size="25" required>
             </div>
             <div class="col-sm mt-5">
                 <label class="form-label"> Bairro:</label>
-                <input class="fortela" class="quebra espaco" type="text" size="25"  required>
+                <input id="bairro" class="fortela" class="quebra espaco" type="text" size="25"  required>
             </div> 
         </div>
         <div class="row" id="soletra02">      
             <div class="col-sm mt-5">
                 <label class="form-label"> Estado:</label>
-                <input class="fortela" class="quebra espaco" type="text" size="25"  required>
+                <input id="uf" class="fortela" class="quebra espaco" type="text" size="25"  required>
             </div>
         </div>
               
