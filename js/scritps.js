@@ -147,9 +147,8 @@ $(function(){
         cpfBR: true
       },
       cnpj:{
-        
         cnpjBR: true
-            }
+            },
     },
   });
 
@@ -172,6 +171,15 @@ function verificaForcaSenha()
 			$('#password-status').html("<span style='color:orange'>Médio, insira um caracter especial</span>");
 		}
 	}
+};
+
+function mostrarOcultarSenha(){
+    let senha=document.getElementById("password");
+    if(senha.type=="password"){
+        senha.type="text";
+    }else{
+        senha.type="password"
+    }
 }
 
 
