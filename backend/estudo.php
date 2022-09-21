@@ -6,16 +6,16 @@
 $idade = 21;
 $altura = 1.86;
 
-echo "Meu nome é $nome, minha idade é $idade anos e minha altura é $altura.";*/
+echo "Meu nome é $nome, minha idade é $idade anos e minha altura é $altura.";
 
-/*$nome = "Gabriel";
+$nome = "Gabriel";
 if(is_string($nome)):
     echo "É uma string";
 else:
     echo "Não é uma string";
-endif;*/  
+endif;
 
-/*
+
 $nome = 123;
 var_dump($nome);
 if(is_string($nome)):
@@ -23,21 +23,21 @@ if(is_string($nome)):
 else:
     echo "Não é uma string";
 endif;  
-echo "<hr>";*/
+echo "<hr>";
 
-/*$nome = 'eduardo';
-echo 'meu nome é ' .$nome. ' \'rodrigues\'';*/
+$nome = 'eduardo';
+echo 'meu nome é ' .$nome. ' \'rodrigues\'';
 
 // contantes
 
-/*define ("NOME" , "Eduardo rodrigues"); //ESCREVER EM MAIÚSCULO AS CONSTANTES
+define ("NOME" , "Eduardo rodrigues"); //ESCREVER EM MAIÚSCULO AS CONSTANTES
 echo NOME;
 
-echo "<hr>";*/
+echo "<hr>";
 
 //array 
 
-/*$carros = array("bmw", "ford", "fiat");
+$carros = array("bmw", "ford", "fiat");
 $carros[3] = "golf";  //adicionando item na array
 echo $carros[3];
 
@@ -54,7 +54,7 @@ foreach ($carros as $tt){
 echo "<hr>";
 
 $pessoa = array ("nome"=>"Eduardo", "filho"=>"Gabriel");
-echo $pessoa{"nome"};*/
+echo $pessoa{"nome"};
 
 
 //CONDICIONAIS
@@ -100,7 +100,67 @@ echo "<hr>";
 $soma = $b - $a;  // pode ser todos os operadores aritimeticos  
 echo $soma;
 
+echo "<hr>";
 
+$valor = 20;
+
+echo ++$valor;
+
+echo "<hr>";
+
+$a = 10;
+$b = 15;
+
+$a += $b; // é igual a $a = $a + $b;
+echo $a;
+
+if(10 <> 10):
+    echo "POSITIVO";
+else:
+    echo "NEGATIVO";
+endif;
+
+$idade = 25;
+$nome = "Eduardo";
+
+if (($idade == 25) and ($nome == "Eduardo")):
+    echo "Verdadeiro";
+else:
+    echo "falso";
+endif;
+
+$contador = 1;
+
+while ($contador <= 10): //while quer dizer enquanto.
+    echo "Seu número é $contador <br>";
+    $contador++;
+endwhile;
+
+$valor = 124500;
+
+$format = number_format($valor, 2, ",", ".");
+echo "o valor do produto é $format"; 
+
+function exibirnome(){
+    echo "Eduardo";
+}
+
+exibirnome();*/
+
+
+function mediaAluno($nome, $n1, $n2, $n3){
+    $media = ($n1 + $n2 + $n3) /3;
+    if($media >= 7):
+        echo "$nome foi aprovado com média $media";
+    else:
+        echo "$nome foi reprovado com média $media";
+    endif;    
+
+    
+
+}
+
+mediaAluno("Eduardo", 8, 9, 6);
 
 
 
