@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,18 +67,18 @@
         </div>
         </center>
 
-<form  id="valid" class="letra">
+<form  id="valid" class="letra" action="conexao.php" method="POST">
         <button id="ocult" type="text" class="btn btn-white  btn-outline-info rounded-pill btn-block mb-3 ; anim">Não Sou Pessoa Jurídica</button>
         </center> 
 
         <div class="row ; ocult">    
             <div class="col-sm "  id="soletra">
                 <label class="form-label"> Razão Social:</label>
-                <input class="fortela" class="quebra espaco" type="text" name="f_nome" size="20" >
+                <input class="fortela" class="quebra espaco" type="text" name="r_social" name size="20" >
             </div>
             <div class="col-sm" id="sol01">
                 <label class="form-label"> Nome Fantasia:</label>
-                <input class="fortela" class="quebra espaco" type="text" name="f_nome" size="20" >
+                <input class="fortela" class="quebra espaco" type="text" name="n_fantasia" size="20" >
             </div>
             <div class="col-sm">
                 <label class="form-label"> CNPJ:</label>
@@ -87,15 +88,15 @@
         <div class="row">
             <div  id="sol02" class="col-sm mt-5">
                 <label class="form-label"> Nome:</label>
-                <input   class="fortela"  class="quebra espaco" type="text" size="20" required> 
-            </div>
+                <input   class="fortela"  class="quebra espaco" type="text" name="nome" size="20" required> 
+            </div> 
             <div class="col-sm mt-5" id="sol03">
                 <label class="form-label"> Sobrenome:</label>
-                <input   class="fortela" id="l" class="quebra espaco" type="text" name="f_nome" size="20" required>
+                <input   class="fortela" id="l" class="quebra espaco" type="text" name="sobrenome" size="20" required>
             </div>
             <div class="col-sm mt-5">
                 <label class="form-label"> Data de Nascimento:</label>
-                <input class="fortela" name="dt" class="quebra espaco" type="date" nome="f_date" min="1900-01-01" max="2022-08-01" required>  
+                <input class="fortela" name="dt" class="quebra espaco" type="date"  min="1900-01-01" max="2022-08-01" required>  
             </div>
         </div>
         <div class="row">
@@ -113,7 +114,7 @@
             </div>
             <div class="col-sm mt-5">   
                 <label class="form-label"> Digite seu Email</label>
-                <input name="email" id="email" class="fortela" class="quebra espaco" type="email" no0me="f_email" size="20" required>
+                <input name="email" id="email" class="fortela" class="quebra espaco" type="email"  size="20" required>
             </div>
         </div>    
         <div class="row">
@@ -127,7 +128,7 @@
             </div>
             <div class="col-sm mt-5">
                 <label class="form-label"> Endereço:</label>
-                <input id="rua" class="fortela" class="quebra espaco" type="text" size="20" required>
+                <input id="rua" class="fortela" class="quebra espaco" name="endereco" type="text" size="20" required>
             </div>    
         </div>    
         <div class="row">
@@ -138,17 +139,17 @@
             </div>
             <div class="col-sm mt-5">
                 <label class="form-label"> Cidade:</label>
-                <input id="cidade" class="fortela" class="quebra espaco" type="text"  size="20" required>
+                <input id="cidade" class="fortela" class="quebra espaco" name="cidade" type="text"  size="20" required>
             </div>
             <div class="col-sm mt-5">
                 <label class="form-label"> Bairro:</label>
-                <input id="bairro" class="fortela" class="quebra espaco" type="text" size="20"  required>
+                <input id="bairro" class="fortela" name="bairro" class="quebra espaco" type="text" size="20"  required>
             </div> 
         </div>
         <div class="row" id="soletra02">      
             <div class="col-sm mt-5">
                 <label class="form-label"> Estado:</label>
-                <input id="uf" class="fortela" class="quebra espaco" type="text" size="20"  required>
+                <input id="uf" class="fortela" class="quebra espaco" name="estado" type="text" size="20"  required>
             </div>
         </div>
               
@@ -174,6 +175,7 @@
             
     </div>   
 </form>
+
 
 </script>
     <script type="text/javascript" src="js/jquery.3.3.1min.js"></script>

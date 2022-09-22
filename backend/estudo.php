@@ -145,7 +145,7 @@ function exibirnome(){
     echo "Eduardo";
 }
 
-exibirnome();*/
+exibirnome();
 
 
 function mediaAluno($nome, $n1, $n2, $n3){
@@ -155,12 +155,14 @@ function mediaAluno($nome, $n1, $n2, $n3){
     else:
         echo "$nome foi reprovado com média $media";
     endif;    
-
-    
-
 }
 
-mediaAluno("Eduardo", 8, 9, 6);
+mediaAluno("Eduardo", 8, 9, 6);*/
+
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+echo "Seu nome é $nome e seu email é $email";
+
 
 
 
