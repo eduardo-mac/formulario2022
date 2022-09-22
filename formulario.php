@@ -67,7 +67,7 @@
         </div>
         </center>
 
-<form  id="valid" class="letra" action="conexao.php" method="POST">
+<form  id="valid" class="letra" action="backend/conexao.php" method="POST">
         <button id="ocult" type="text" class="btn btn-white  btn-outline-info rounded-pill btn-block mb-3 ; anim">Não Sou Pessoa Jurídica</button>
         </center> 
 
@@ -171,6 +171,7 @@
             <div class="mt-3">
                 <input class=" btn btn-primary" type="submit" name="bto_enviar" value="Enviar" >
                 <input type="reset" name="bto_limpar" class="btn btn-secondary" value="Limpar"> 
+                <a href="backend/index.php" class="btn btn-primary" >Lista de Clientes</a>
             </div>
             
     </div>   
