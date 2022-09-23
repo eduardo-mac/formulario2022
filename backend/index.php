@@ -13,10 +13,12 @@ include ("conexao.php");
     </head>
 
     <body>
-
+            <center>
+            <h3 >Dados Formulários</h3>
+            </center>
         <div class="row">
-          <div class="col s12 m6 push-m3 ">
-            <h3 class="light">Dados Formulários</h3>
+          <div class="col s12 m6 push-m1 ">
+           
             <table class="striped">
               <thead>
                 <tr>
