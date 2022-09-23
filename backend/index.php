@@ -1,5 +1,5 @@
 <?php
-include_once 'conexao.php';
+include ("conexao.php");
 ?>
 
 <!DOCTYPE html>
@@ -39,13 +39,26 @@ include_once 'conexao.php';
               <tbody>
                 <?php
                 $sql = "SELECT * FROM pessoa";
-                $resultado = mysqli_query($conexao, $sql);
+                $resultado = $conexao->query($sql);
                 while($dados = mysqli_fetch_array($resultado)):
                 ?>
                 <tr>
                   <td><?php echo $dados['no_pessoa'];?></td>
+                  <td><?php echo $dados['ds_sobrenome'];?></td>
+                  <td><?php echo $dados['ds_email'];?></td>
+                  <td><?php echo $dados['ds_cpf'];?></td>
+                  <td><?php echo $dados['ds_cnpj'];?></td>
+                  <td><?php echo $dados['nu_cep'];?></td>
+                  <td><?php echo $dados['ds_endereco'];?></td>
+                  <td><?php echo $dados['ds_bairro'];?></td>
+                  <td><?php echo $dados['ds_cidade'];?></td>
+                  <td><?php echo $dados['co_uf'];?></td>
+                  <td><?php echo $dados['ds_telefone'];?></td>
+                  <td><?php echo $dados['ds_numero'];?></td>
+                  <td><?php echo $dados['dt_nascimento'];?></td>
+
                   
-                  <td><a href="" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
+                  <td><a href="editar.php?id=<?php echo $dados['id'];?>" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
                   <td><a href="" class="btn-floating red"><i class="material-icons">delete</i></a></td>
                 </tr>
                 <?php endwhile; ?>

@@ -5,7 +5,7 @@ $dbUsername = 'root';
 $dbPassword = '';
 $dbName = 'teste';
 
-$conexao = mysqli_connect ($dbHost, $dbUsername, $dbPassword, $dbName);
+$conexao = new mysqli ($dbHost, $dbUsername, $dbPassword, $dbName);
 
 /*if($conexao->connect_errno){
     echo "erro";
@@ -56,5 +56,5 @@ else{
         }
 
     }
-    $conexao ->close();
+    
 ?>
