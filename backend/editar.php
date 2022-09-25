@@ -19,6 +19,7 @@ endif;
     </head>
 
     <body>
+        
             <center>
             <h3 >Editar Clientes</h3>
             </center>
@@ -108,12 +109,12 @@ endif;
               
             
             <div class="mt-3">
-                <a  href="index.php" class=" btn btn-primary" type="submit" name="bto_editar">Atualizar</a>
+                <button  class=" btn btn-primary" type="submit" name="bto_editar">Atualizar</button>
                 <a href="index.php" class="btn btn-primary" >Lista de Clientes</a>
             </div>
 </form>
 
-
+<script> M.AutoInit();</script>  
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
   </html>

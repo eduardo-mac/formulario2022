@@ -1,6 +1,7 @@
 <?php
 include ("conexao.php");
 
+
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +15,7 @@ include ("conexao.php");
     </head>
 
     <body>
+      
             <center>
             <h3 >Dados Formulários</h3>
             </center>
@@ -61,8 +63,20 @@ include ("conexao.php");
                   <td><?php echo $dados['dt_nascimento'];?></td>
 
                   
-                  <td><a href="editar.php?id=<?php echo $dados['id'];?>" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
-                  <td><a href="" class="btn-floating red"><i class="material-icons">delete</i></a></td>
+                  <td><a href="editar.php?id = <?php echo $dados['id'];?>" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
+                  <td><a href="#modal<?php echo $dados['id'];?>" class="btn-floating red modal-trigger"><i class="material-icons">delete</i></a></td>
+                  <div id="modal<?php echo $dados['id'];?>" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Opa!</h4>
+      <p>Tem certeza que deseja excluir esse cliente?</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+      <form action= "delete.php" method="POST"></form>
+      <input type="hidden" name="id" value=" <?php echo $dados['id'];?>">
+      <button type="submit" name="bto_deletar" class="btn-red">Sim, quero deletar</button>
+    </div>
+  </div>
                 </tr>
                 <?php endwhile; ?>
               </tbody>
@@ -74,7 +88,7 @@ include ("conexao.php");
 
         </div>
 
-
+      <script> M.AutoInit();</script>              
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
   </html>
