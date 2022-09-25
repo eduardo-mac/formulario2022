@@ -171,7 +171,7 @@
             <div class="mt-3">
                 <input class=" btn btn-primary" type="submit" name="bto_enviar" value="Enviar" >
                 <input type="reset" name="bto_limpar" class="btn btn-secondary" value="Limpar"> 
-                <a href="backend/index.php" class="btn btn-primary" >Lista de Clientes</a>
+                
             </div>
             
     </div>   
