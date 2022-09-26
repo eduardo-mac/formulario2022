@@ -17,7 +17,7 @@ else{
 
     if(isset($_POST['bto_enviar']))
     {
-        include_once('conexao.php');
+       
 
         //$r_social = $_POST['r_social'];
        // $n_fantasia = $_POST['n_fantasia'];

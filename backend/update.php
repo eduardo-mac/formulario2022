@@ -1,7 +1,6 @@
-<?php
-include_once('conexao.php');
 
-if(isset($_POST['bto_editar']))
+
+/*if(isset($_POST['bto_editar']))
     {
        $nome = $_POST['nome'];
        $sobrenome = $_POST['sobrenome'];

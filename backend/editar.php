@@ -1,14 +1,15 @@
 <?php
-include ("conexao.php");
+include_once 'conexao.php';
+
 if(isset($_GET['id'])):
     $id = mysqli_escape_string($conexao, $_GET['id']);
 
     $sql = "SELECT * FROM pessoa WHERE  id = '$id'";
-    $resultado = mysqli_query($conexao, $sql);
+    $resultado = mysqli_query($conexao, $sql); 
     $dados = mysqli_fetch_array($resultado);
 endif;
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
   <html>
     <head>
         <meta charset="utf-8">
@@ -24,7 +25,7 @@ endif;
             <h3 >Editar Clientes</h3>
             </center>
         <form action="update.php" method="POST">    
-            <input type="hidden" name="id" value="<?php echo $dados['id'];?>">
+        
             <div class="row ; ocult">    
             <div class="col-sm "  id="soletra">
                 <label class="form-label"> Razão Social:</label>
@@ -60,7 +61,7 @@ endif;
             </div>    
             <div class="col-sm mt-5">
                 <label class="form-label">Sexo:</label>
-                <select class="fortela" class="quebra espaco" name="f_sexo" required>
+                <select class="fortela" class="quebra espaco" value="<?php echo $dados['dt_nascimento'];?>" name="f_sexo" required>
                     <option> Masculino</option>
                     <option> Feminino</option>
                     <option> Nada a declarar</option>
@@ -113,8 +114,7 @@ endif;
                 <a href="index.php" class="btn btn-primary" >Lista de Clientes</a>
             </div>
 </form>
-
-<script> M.AutoInit();</script>  
+  
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
   </html>
