@@ -27,9 +27,12 @@ if(isset($_POST['btn_editar'])):
 
 
 
-        if(mysqli_query($conexao, $sql)):
-            echo"Atualizado com Sucesso";
-        else:
-            echo"Erro ao Atualizar";
+if(mysqli_query($conexao, $sql)):
+    $_SESSION['mensagem'] = "Atualizado com Sucesso!";
+    header('Location: ../backend/index.php');
+else:
+    $_SESSION['mensagem'] = "Erro ao Atualizar";
+    header('Location: ../backend/index.php');
     endif;  
 endif;  
+
