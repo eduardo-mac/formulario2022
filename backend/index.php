@@ -25,7 +25,7 @@ include ("conexao.php");
             <h3 >Dados Formulários</h3>
             </center>
         <div class="row">
-          <div class="col s12 m6 push-m1 ">
+          <div class="col s12 m6  ">
            
             <table class="striped">
               <thead>
