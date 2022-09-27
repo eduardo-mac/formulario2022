@@ -63,15 +63,14 @@ include ("conexao.php");
                   <td><?php echo $dados['dt_nascimento'];?></td>
 
                   
-                  <td><a href="editar.php? id = <?php echo $dados['id'];?>" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
+                  <td><a href="editar.php?id=<?php echo $dados['id'];?>" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
                   <td><a class="btn-floating red modal-trigge"><i class="material-icons">delete</i></a></td>
                   
-   
-     
-    </div>
-  </div>
+  
                 </tr>
                 <?php endwhile; ?>
+                </div>
+  </div>
               </tbody>
             </table>
             <br>

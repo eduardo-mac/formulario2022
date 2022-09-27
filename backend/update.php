@@ -1,39 +1,35 @@
+<?php
+include_once 'conexao.php';
 
-
-/*if(isset($_POST['bto_editar']))
-    {
-       $nome = $_POST['nome'];
-       $sobrenome = $_POST['sobrenome'];
-       $email = $_POST['email'];
-       $cpf = $_POST['cpf'];
-       $cnpj = $_POST['cnpj'];
-       $cep = $_POST['cep'];
-        $endereco = $_POST['endereco'];
-        $bairro = $_POST['bairro'];
-        $cidade = $_POST['cidade'];
-        $estado = $_POST['estado'];
-        $tel = $_POST['tel'];
-        $numero = $_POST['numero'];
-        $dt = $_POST['dt'];
+if(isset($_POST['btn_editar'])):
+       $nome = mysqli_escape_string($conexao, $_POST['nome']);
+       $sobrenome = mysqli_escape_string($conexao,$_POST['sobrenome']);
+       $email = mysqli_escape_string($conexao,$_POST['email']);
+       $cpf = mysqli_escape_string($conexao,$_POST['cpf']);
+       $cnpj =mysqli_escape_string($conexao, $_POST['cnpj']);
+       $cep = mysqli_escape_string($conexao,$_POST['cep']);
+        $endereco = mysqli_escape_string($conexao,$_POST['endereco']);
+        $bairro =mysqli_escape_string($conexao,$_POST['bairro']);
+        $cidade =mysqli_escape_string($conexao,$_POST['cidade']);
+        $estado =mysqli_escape_string($conexao,$_POST['estado']);
+        $tel = mysqli_escape_string($conexao,$_POST['tel']);
+        $numero = mysqli_escape_string($conexao,$_POST['numero']);
+        
 
         $id = mysqli_escape_string($conexao, $_POST['id']);
         
 
-        $result = "UPDATE pessoa SET no_pessoa = '$nome', ds_sobrenome = '$sobrenome', ds_email = '$email', 
+        $sql = "UPDATE pessoa SET no_pessoa = '$nome', ds_sobrenome = '$sobrenome', ds_email = '$email', 
                                                             ds_cpf = '$cpf', ds_cnpj = '$cnpj', nu_cep = '$cep', ds_endereco ='$endereco', ds_bairro ='$bairro',
-                                                             ds_cidade = '$cidade', co_uf = '$estado', ds_telefone = '$tel', ds_numero = '$numero', 
-                                                             dt_nascimento = '$dt' WHERE id = '$id'";
+                                                             ds_cidade = '$cidade', co_uf = '$estado', ds_telefone = '$tel', ds_numero = '$numero' WHERE id = '$id'";
 
-        $resultofin = $conexao->query($result) or trigger_error($conexao->error);
-
+        
 
 
-        if($resultofin ==true){
+
+        if(mysqli_query($conexao, $sql)):
             echo"Atualizado com Sucesso";
-        }else{
+        else:
             echo"Erro ao Atualizar";
-        }
-
-    }
-    
-?>
+    endif;  
+endif;  

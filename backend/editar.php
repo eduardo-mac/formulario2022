@@ -24,7 +24,8 @@ endif;
             <center>
             <h3 >Editar Clientes</h3>
             </center>
-        <form action="update.php" method="POST">    
+        <form action="update.php" method="POST">   
+            <input type="hidden" name="id" value="<?php echo $dados['id'];?>"> 
         
             <div class="row ; ocult">    
             <div class="col-sm "  id="soletra">
@@ -43,19 +44,16 @@ endif;
         <div class="row">
             <div  id="sol02" class="col-sm mt-5">
                 <label class="form-label"> Nome:</label>
-                <input   class="fortela" value="<?php echo $dados['no_pessoa'];?>"  class="quebra espaco" type="text" name="nome" size="20" required> 
+                <input   class="fortela"   class="quebra espaco" type="text" name="nome" value="<?php echo $dados['no_pessoa'];?>" size="20" required> 
             </div> 
             <div class="col-sm mt-5" id="sol03">
                 <label class="form-label"> Sobrenome:</label>
                 <input   class="fortela" id="l" value="<?php echo $dados['ds_sobrenome'];?>"  class="quebra espaco" type="text" name="sobrenome" size="20" required>
             </div>
-            <div class="col-sm mt-5">
-                <label class="form-label"> Data de Nascimento:</label>
-                <input class="fortela" value="<?php echo $dados['dt_nascimento'];?>"  name="dt" class="quebra espaco" type="date"  min="1900-01-01" max="2022-08-01" required>  
-            </div>
+            
         </div>
         <div class="row">
-            <div id="validac" class="col-sm mt-5">    
+            <div class="col-sm mt-5">    
                 <label class="form-label"> CPF:</label>
                 <input id="cpf" name="cpf" class="fortela" value="<?php echo $dados['ds_cpf'];?>" class="quebra espaco" type="text" maxlength="14" size="20">
             </div>    
@@ -110,7 +108,7 @@ endif;
               
             
             <div class="mt-3">
-                <button  class=" btn btn-primary" type="submit" name="bto_editar">Atualizar</button>
+                <button  class=" btn btn-primary" type="submit" name="btn_editar">Atualizar</button>
                 <a href="index.php" class="btn btn-primary" >Lista de Clientes</a>
             </div>
 </form>
