@@ -67,8 +67,16 @@
         </div>
         </center>
 
+
 <form  id="valid" class="letra" action="backend/conexao.php" method="POST">
-        <button id="ocult" type="text" class="btn btn-white  btn-outline-info rounded-pill btn-block mb-3 ; anim">Não Sou Pessoa Jurídica</button>
+<div id="" type="text"  class="btn btn-white   rounded-pill btn-block mb-3">
+               
+                <select class="fortela" name="pf_pj" class="quebra espaco" name="f_sexo" required>
+                    <option> P. Física</option>
+                    <option> P. Jurídica</option>
+                </select>
+            </div>
+        
         </center> 
 
         <div class="row ; ocult">    
@@ -155,14 +163,14 @@
               
             <div class="col-sm mt-5">
                 <label class="form-label">Senha:</label>
-                <input onKeyUp="verificaForcaSenha();" class="fortela ; mb-3  " class="quebra espaco" id="password" type="password" name="f_senha" size="20" maxlength="10" required> 
+                <input onKeyUp="verificaForcaSenha();" class="fortela ; mb-3  " class="quebra espaco" id="password" type="password" name="senha" size="20" maxlength="10" required> 
                 <span id="password-status"></span>
             </div>
                 <input type="checkbox" onclick="mostrarOcultarSenha()">Mostrar Senha
 
             <div class="col-sm mt-5">
                 <label class= "quebra espaco" class="quebra"> Opiniões:</label>
-                <textarea class="quebra espaco" name="f_comantário" cols="50" rows="10"required></textarea>   
+                <textarea class="quebra espaco" name="opiniao" cols="50" rows="10"required></textarea>   
             </div>
            
             <input type="checkbox" name="termo" checked required> 

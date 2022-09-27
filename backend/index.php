@@ -32,9 +32,12 @@ include ("conexao.php");
                 <tr>
                   <th>Nome:</th>
                   <th>Sobrenome:</th>
-                  <th>Email:</th>
+                  <th>PF ou PJ:</th>
+                  <th>Razão social:</th>
+                  <th>Nome fantasia:</th>
                   <th>CPF:</th>
                   <th>CNPJ:</th>
+                  <th>Email:</th>
                   <th>CEP:</th>
                   <th>Endereço:</th>
                   <th>Bairro:</th>
@@ -43,6 +46,8 @@ include ("conexao.php");
                   <th>Telefone:</th>
                   <th>Número:</th>
                   <th>Data Nascimento:</th>
+                  <th>Senha:</th>
+                  <th>Opinião:</th>
 
                 </tr>
               </thead>
@@ -55,9 +60,12 @@ include ("conexao.php");
                 <tr>
                   <td><?php echo $dados['no_pessoa'];?></td>
                   <td><?php echo $dados['ds_sobrenome'];?></td>
-                  <td><?php echo $dados['ds_email'];?></td>
                   <td><?php echo $dados['ds_cpf'];?></td>
+                  <td><?php echo $dados['pf_pj'];?></td>
+                  <td><?php echo $dados['r_social'];?></td>
+                  <td><?php echo $dados['n_fantasia'];?></td>
                   <td><?php echo $dados['ds_cnpj'];?></td>
+                  <td><?php echo $dados['ds_email'];?></td>
                   <td><?php echo $dados['nu_cep'];?></td>
                   <td><?php echo $dados['ds_endereco'];?></td>
                   <td><?php echo $dados['ds_bairro'];?></td>
@@ -66,6 +74,8 @@ include ("conexao.php");
                   <td><?php echo $dados['ds_telefone'];?></td>
                   <td><?php echo $dados['ds_numero'];?></td>
                   <td><?php echo $dados['dt_nascimento'];?></td>
+                  <td><?php echo $dados['senha'];?></td>
+                  <td><?php echo $dados['opiniao'];?></td>
 
                   
                   <td><a href="editar.php?id=<?php echo $dados['id'];?>" class="btn-floating orange"><i class="material-icons">edit</i></a></td>

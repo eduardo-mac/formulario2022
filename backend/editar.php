@@ -26,22 +26,8 @@ endif;
             </center>
         <form action="update.php" method="POST">   
             <input type="hidden" name="id" value="<?php echo $dados['id'];?>"> 
-        
-            <div class="row ; ocult">    
-            <div class="col-sm "  id="soletra">
-                <label class="form-label"> Razão Social:</label>
-                <input class="fortela" class="quebra espaco" type="text" name="r_social" name size="20" >
-            </div>
-            <div class="col-sm" id="sol01">
-                <label class="form-label"> Nome Fantasia:</label>
-                <input class="fortela" class="quebra espaco" type="text" name="n_fantasia" size="20" >
-            </div>
-            <div class="col-sm">
-                <label class="form-label"> CNPJ:</label>
-                <input name="cnpj" id="cnpj" value="<?php echo $dados['ds_cnpj'];?>"  size="20" class="fortela" class="quebra espaco" type="text" >    
-            </div>
-        </div>
-        <div class="row">
+
+            <div class="row">
             <div  id="sol02" class="col-sm mt-5">
                 <label class="form-label"> Nome:</label>
                 <input   class="fortela"   class="quebra espaco" type="text" name="nome" value="<?php echo $dados['no_pessoa'];?>" size="20" required> 
@@ -50,6 +36,13 @@ endif;
                 <label class="form-label"> Sobrenome:</label>
                 <input   class="fortela" id="l" value="<?php echo $dados['ds_sobrenome'];?>"  class="quebra espaco" type="text" name="sobrenome" size="20" required>
             </div>
+            <div class="col-sm mt-5" type="text" >
+            <label class="form-label"> Tipo Pessoa:</label>
+                <select class="fortela" value="<?php echo $dados['pf_pj'];?>" name="pf_pj" class="quebra espaco" name="f_sexo" required>
+                    <option> P. Física</option>
+                    <option> P. Jurídica</option>
+                </select>
+            </div>
             
         </div>
         <div class="row">
@@ -57,13 +50,33 @@ endif;
                 <label class="form-label"> CPF:</label>
                 <input id="cpf" name="cpf" class="fortela" value="<?php echo $dados['ds_cpf'];?>" class="quebra espaco" type="text" maxlength="14" size="20">
             </div>    
+            
+            <div class="row ; ocult">    
+            <div class="col-sm "  id="soletra">
+                <label class="form-label"> Razão Social:</label>
+                <input class="fortela" class="quebra espaco" value="<?php echo $dados['r_social'];?>" type="text" name="r_social" name size="20" >
+            </div>
+            <div class="col-sm" id="sol01">
+                <label class="form-label"> Nome Fantasia:</label>
+                <input class="fortela" class="quebra espaco" type="text" value="<?php echo $dados['n_fantasia'];?>" name="n_fantasia" size="20" >
+            </div>
+            <div class="col-sm">
+                <label class="form-label"> CNPJ:</label>
+                <input name="cnpj" id="cnpj" value="<?php echo $dados['ds_cnpj'];?>"  size="20" class="fortela" class="quebra espaco" type="text" >    
+            </div>
+        </div>
+       
             <div class="col-sm mt-5">
                 <label class="form-label">Sexo:</label>
-                <select class="fortela" class="quebra espaco" value="<?php echo $dados['dt_nascimento'];?>" name="f_sexo" required>
+                <select class="fortela" class="quebra espaco" value="<?php echo $dados['sexo'];?>" name="sexo" required>
                     <option> Masculino</option>
                     <option> Feminino</option>
                     <option> Nada a declarar</option>
                 </select>
+            </div>
+            <div class="col-sm mt-5">
+                <label class="form-label"> Data de Nascimento:</label>
+                <input class="fortela" name="dt" class="quebra espaco" type="date"  min="1900-01-01" max="2022-08-01" required>  
             </div>
             <div class="col-sm mt-5">   
                 <label class="form-label"> Digite seu Email</label>
@@ -105,6 +118,17 @@ endif;
                 <input id="uf" class="fortela" class="quebra espaco" value="<?php echo $dados['co_uf'];?>"  name="estado" type="text" size="20"  required>
             </div>
         </div>
+        <div class="col-sm mt-5">
+                <label class="form-label">Senha:</label>
+                <input onKeyUp="verificaForcaSenha();" class="fortela ; mb-3  " value="<?php echo $dados['senha'];?>"  class="quebra espaco" id="password" type="password" name="f_senha" size="20" maxlength="10" required> 
+                <span id="password-status"></span>
+            </div>
+                
+
+            <div class="col-sm mt-5">
+                <label class= "quebra espaco" class="quebra"> Opiniões:</label>
+                <textarea class="quebra espaco" name="f_comantário" value="<?php echo $dados['opiniao'];?>" cols="50" rows="10"required></textarea>   
+            </div>
               
             
             <div class="mt-3">
