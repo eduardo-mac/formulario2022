@@ -1,8 +1,9 @@
 <?php
 
 namespace app\controllers;
-
-use yii\web\Controller;
+use Yii;
+use app\models\CadastroModel;
+use yii\base\Controller;
 
 class EstudoController extends Controller
 {
@@ -11,9 +12,17 @@ class EstudoController extends Controller
     public function actionFormulario()
     {
         $cadastroModel = new CadastroModel;
+        $post = Yii::$app->request->post();
 
-        return $this->render('formulario', [
-            'model' => $cadastroModel
-        ]);
+        if($cadastroModel->load($post) && $cadastroModel->validate()){
+            return $this->render('formulario-confirmacao', [
+                'model' => $cadastroModel
+            ]);
+            }else {
+                return $this->render('formulario', [
+                    'model' => $cadastroModel
+            
+         ]);
+        }
     }
 } 

@@ -1,5 +1,5 @@
 <?php
-use \yii\bootstrap\ActiveForm;
+use \yii\bootstrap5\ActiveForm;
 use \yii\helpers\Html;
 ?>
 <h2>Formulário Yii </h2>
@@ -7,9 +7,9 @@ use \yii\helpers\Html;
 
 <?php $form = ActiveForm::begin() ?>
 
-    <?php $form->field($model, 'nome')?>
-    <?php $form->field($model, 'email')?>
-    <?php $form->field($model, 'idade')?>
+    <?= $form->field($model, 'nome')?>
+    <?= $form->field($model, 'email')?>
+    <?= $form->field($model, 'idade')?>
 
     <div class="form-group">
         <?= Html::submitButton('Enviar Dados',['class'=>'btn btn-primary']) ?>
